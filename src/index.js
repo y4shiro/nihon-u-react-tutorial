@@ -1,7 +1,7 @@
 import 'bulma/css/bulma.css';
 
 import { render } from 'react-dom';
-import App from './App';
+import App from './App.jsx';
 
 render(
   <App />,
