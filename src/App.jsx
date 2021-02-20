@@ -49,6 +49,8 @@ function Gallery(props) {
 }
 
 function Form(props) {
+  const breeds = ["shiba", "akita"];
+
   function handleSubmit(event) {
     event.preventDefault();
     const { breed } = event.target.elements;
@@ -62,8 +64,13 @@ function Form(props) {
           <div className="control is-expanded">
             <div className="select is-fullwidth">
               <select name="breed" defaultValue="shiba">
-                <option value="shiba">Shiba</option>
-                <option value="akita">Akita</option>
+                {
+                  breeds.map((breed) => {
+                    return(
+                      <option key={breed} value={breed}>{breed}</option>
+                    );
+                  })
+                }
               </select>
             </div>
           </div>
@@ -95,7 +102,7 @@ function Main() {
     <main>
       <section className="section">
         <div className="container">
-          <Form onFormSubmit={reloadImages}/>
+          <Form onFormSubmit={reloadImages} />
         </div>
       </section>
       <section className="section">
