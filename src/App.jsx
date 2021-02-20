@@ -49,7 +49,7 @@ function Gallery(props) {
 }
 
 function Form(props) {
-  const breeds = ["shiba", "akita"];
+  const breeds = ["shiba", "akita", "retriever", "beagle", "collie"];
 
   function handleSubmit(event) {
     event.preventDefault();
